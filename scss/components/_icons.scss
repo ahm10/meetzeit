@@ -1,0 +1,155 @@
+.icon {
+  padding: 1rem;
+  margin: 1rem 1rem 1rem;
+  //border-bottom: 1px solid $color-yellow-primary;
+  text-align: center;
+  position: relative;
+
+  &__primary{
+    padding: 2rem;
+    position: relative;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    transition: $transition-secondary;
+    background-color: darken($color-dark, 3%);
+    z-index: 10;
+
+    &::after{
+      content: "";
+      position: absolute;
+      height: 0;
+      transition: $transition-secondary;
+      width: 100%;
+      bottom: 0;
+      left: 0;
+      background-color: $color-yellow-dark;
+    }
+
+    &:hover{
+      &::after{
+        height: 100%;
+      }
+      .icon{
+       
+        &__img{
+          filter: brightness(0);
+        }
+        &__text{
+          color: $color-dark;
+        }
+      }
+    }
+      
+    
+  }
+
+  &__border {
+    height: 1.5px;
+    width: 100%;
+    background-color: $color-yellow-dark;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+
+  &__img {
+    width: 50%;
+    position: relative;
+    z-index: 2;
+    transition: $transition-secondary;
+    filter: brightness(0) invert(1);
+  }
+  &__text {
+    font-weight: 700;
+    position: relative;
+    z-index: 2;
+    margin-top: 1rem;
+    font-size: 2rem;
+    transition: $transition-secondary;
+    color: $color-yellow-dark;
+  }
+
+  &__tech {
+    position: relative;
+    margin: 1rem auto;
+    max-width: 30rem;
+    border-radius: 0.5rem;
+    background: $color-dark;
+    border-radius: 1.4rem;
+    height: 12rem;
+    overflow: hidden;
+    z-index: 2;
+    cursor: none;
+    transition: all 0.3s cubic-bezier(0.39, 0.575, 0.565, 1);
+
+    &-img {
+      height: 12rem;
+      padding: 2.5rem;
+      z-index: 2;
+      @include flex-all-center;
+      transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+
+      img {
+        width: auto;
+        max-height: 100%;
+      }
+      &--bottom {
+        img {
+          filter: grayscale(1);
+        }
+      }
+    }
+
+    &:hover {
+      transform: translateY(-1rem);
+      box-shadow: 0 1.5rem 1rem 0 $color-black;
+      .icon__tech-img {
+        &--top,
+        &--bottom {
+          transform: translateY(-12rem);
+        }
+        &--html {
+          background-color: #e44d26;
+        }
+        &--css{
+          background-color: #264de4;          
+        }
+        &--js{
+          background-color: #f7df1e;
+        }
+        &--angular{
+          background-color: #d4173b;
+        }
+        &--mongo{
+          background:linear-gradient(to right, #4DB33D, #3FA037);
+        }
+        &--node{
+          background-color: #3c873a;
+        }
+        &--sass{
+          background-color: #cc6699;
+        }
+        &--tensor{
+          background:linear-gradient(to right, #FFA800, #FF6F00)
+        }
+        &--keras{
+          background-color: #d00000;
+        }
+      }
+    }
+  }
+
+  &__footer {
+    padding: 1.5rem 0;
+    margin: 0 0 0 2rem;
+    filter: brightness(0) invert(1);
+    width: 2.6rem;
+  }
+  &__header{
+    margin: -1rem 1rem 0 0;
+    width: 2.6rem;
+    width: 2.6rem;
+    padding: 2px;
+    filter: brightness(0) invert(1);
+  }
+}

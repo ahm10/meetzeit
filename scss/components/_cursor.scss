@@ -1,0 +1,78 @@
+.cursor{
+    height: 2.5rem;
+    width: 2.5rem;
+    position: absolute;
+    border-radius: 50%;
+    transform: translate(-50%,-50%);
+    pointer-events: none;
+    z-index: 2000;
+    transition: transform .3s ease-in-out;
+    transform-origin: center center;
+    mix-blend-mode: exclusion;
+   top: 20rem;
+   left: 10rem;
+    &__bg{
+    transition: transform .3s ease-in-out;
+    display: block;
+    left: 0;
+    top: 0;
+    background: #fff;
+    transform: translate(50%,50%);
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 80px;
+    transform: scale(0.8);
+    mix-blend-mode: exclusion;
+    transform-origin: center center;
+    }
+}
+
+.cursor--link--big, .cursor--link--medium{
+    display: inline-block;
+}
+
+.border-cursor{
+    background-color: $color-dark;
+    .cursor__bg{
+        transform: scale(0.5);
+    }
+}
+
+.huge-cursor{
+    .cursor__bg{
+        transform: scale(7);
+    }
+}
+
+.big-cursor{
+    .cursor__bg{
+        transform: scale(3);
+    }
+}
+
+.medium-cursor{
+    .cursor__bg{
+        transform: scale(2);
+    }
+}
+
+
+.tiny-cursor{
+    .cursor__bg{
+        transform: scale(0.2);
+    }
+}
+
+.hover-item{
+    transition: all 0.3s ease;
+}
+
+
+._3d-hover{
+   &__container{
+       perspective: 3rem;
+   }
+   &__item{
+       transition: transform 0.3s;
+   }
+}

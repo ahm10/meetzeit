@@ -1,0 +1,46 @@
+//font size variables
+$default-font-size:1.6rem;
+
+//website colors 
+$color-yellow-primary:rgb(255, 203, 79);
+$color-yellow-dark:rgb(255, 195, 37);
+$color-yellow-light:#fffbec;
+
+$color-dark: #191716;
+$color-dark-1:#080505;
+$color-black: #000;
+$color-grey: rgb(90, 90, 90);
+$color-light-grey: #ccc;
+$color-white: #fff;
+$color-light: #afae98;
+$color-blue-dull:#083d77;
+$color-blue-dark:#011638;
+$color-blue-primary:#090ea6;
+$color-purple-primary:#9b5de5;
+
+//letter spacing values
+
+$letter-spacing-n-huge: -1rem;
+$letter-spacing-n-big:-0.5rem;
+$letter-spacing-n-small:-0.05rem;
+
+//margins and paddings
+
+$section-padding: 5rem 6vw;
+$section-padding-small: 2rem;
+
+//transitions
+$transition-primary: all 300ms cubic-bezier(0.48, 0.01, 0.61, 0.99);
+$transition-secondary:all 0.6s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+
+//color may needed afterwards
+
+// #9b5de5  - purple
+// #083d77 - blue
+// #0d21a1 - blue bright
+
+// #011638 - blue dark
+// #fe4a49 - bright red
+// #DB504A- dull red
+
+// #080708 - dark
